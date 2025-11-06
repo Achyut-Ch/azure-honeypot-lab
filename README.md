@@ -9,12 +9,13 @@ This project shows how I created a **honeypot virtual machine in Azure**, captur
 ---
 
 ## 🧱 What I Did
-1. Created an Azure Virtual Machine and allowed all inbound traffic.
-2. Turned off the firewall so attackers could try to connect.
-3. Failed a few logins manually to generate Event ID 4625 (failed login).
-4. Set up a **Log Analytics Workspace** and **Sentinel** to collect the logs.
-5. Imported a **GeoIP watchlist** to add country and city data to attacker IPs.
-6. Created a **Sentinel workbook (map)** to visualize attacks on a world map.
+### 1. Created an Azure Virtual Machine and allowed all inbound traffic.
+       https://github.com/Achyut-Ch/azure-honeypot-lab/blob/main/images/1.png
+3. Turned off the firewall so attackers could try to connect.
+4. Failed a few logins manually to generate Event ID 4625 (failed login).
+5. Set up a **Log Analytics Workspace** and **Sentinel** to collect the logs.
+6. Imported a **GeoIP watchlist** to add country and city data to attacker IPs.
+7. Created a **Sentinel workbook (map)** to visualize attacks on a world map.
 
 ---
 
