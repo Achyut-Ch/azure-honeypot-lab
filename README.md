@@ -44,8 +44,4 @@ You can see the steps in the screenshots folder:
 
 ---
 
-## 🧑‍💻 Author
-**Bharath Y**  
-*Aspiring Cybersecurity Analyst | Cloud Security Enthusiast*  
-[LinkedIn Profile](https://linkedin.com/in/your-link) | [GitHub Profile](https://github.com/yourusername)
 
