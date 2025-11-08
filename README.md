@@ -3,7 +3,7 @@ Azure Honeypot project using Microsoft Sentinel and KQL to visualize brute-force
 
 # 🕵️‍♂️ Azure Honeypot and Attack Map Project
 
-    --> writing
+--> writing
 
 
 
