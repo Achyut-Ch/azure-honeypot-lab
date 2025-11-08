@@ -139,6 +139,19 @@ This project shows how I created a **honeypot virtual machine in Azure**, captur
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/Select%20resources%2037.png)
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/review%20and%20create%2038.png)
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/check%20in%20vm%20azure%20monitor%20created%2039.png)
+
+### 📥 Step 8: Simulate Attacks and Verify Ingested Logs in Microsoft Sentinel
+
+After the **Azure Monitor Agent (AMA)** is installed and logs are flowing into the **Log Analytics Workspace**, you can verify that your honeypot VM is capturing attack data in **Microsoft Sentinel**.
+
+#### 🔍 Verify Logs in Sentinel
+- Go to **Microsoft Sentinel** in the Azure Portal.
+- Click on **Logs** in the left-hand menu.
+- In the query editor, run the following KQL query to filter failed login attempts:
+
+```kql
+SecurityEvent
+| where EventID == 4625
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/open%20log%20analytics%20workspace%20%2C%20click%20logs%2040.png)
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/run%20query%20secuirty%20event%20id%204625%2041.png)
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/nmap%20scan%20vm%2041.png)
