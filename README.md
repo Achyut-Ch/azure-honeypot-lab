@@ -51,7 +51,7 @@ This project shows how I created a **honeypot virtual machine in Azure**, captur
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/Deleting%20RDP%20inbound%20rule%2014.png)
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/adding%20inbound%20rule%2015.png)
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/changing%20destination%20port%20ranges%20and%20name%2016.png)
-### 🔥 Step 3: Disable Windows Defender Firewall
+### 🔥 Step 3: Disable Windows Defender Firewall to attract more attackers
 
 - Open your **Windows 10 Virtual Machine** from the Azure Portal.
 - Go to **Start Menu** → search for **Windows Defender Firewall** and open it.
@@ -91,9 +91,20 @@ This project shows how I created a **honeypot virtual machine in Azure**, captur
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/check%20login%20failer%204625%2025.png)
 
 
-3. Turned off the firewall so attackers could try to connect.
-4. Failed a few logins manually to generate Event ID 4625 (failed login).
-### 5. Set up a **Log Analytics Workspace** and **Sentinel** to collect the logs.
+
+### 📊 Step 6: Set Up Log Analytics Workspace and Microsoft Sentinel
+
+- First, create a **Log Analytics Workspace** in the Azure Portal.
+  - Go to **Monitor** → **Log Analytics Workspaces** → **Create**.
+  - Choose a name, resource group, and region.
+
+- After the workspace is created, set up **Microsoft Sentinel**:
+  - Go to **Microsoft Sentinel** in the Azure Portal.
+  - Click **+ Add** and select the Log Analytics Workspace you just created.
+  - Click **Enable** to activate Sentinel on that workspace.
+
+> ✅ This setup is required to collect and analyze logs from your honeypot VM in Sentinel.
+
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/create%20log%20analytics%20workspace%2026.png)
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/log%20analytics%20workspace%20created%2027.png)
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/create%20sentinel%2028.png)
