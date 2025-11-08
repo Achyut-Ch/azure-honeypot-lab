@@ -51,9 +51,17 @@ This project shows how I created a **honeypot virtual machine in Azure**, captur
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/Deleting%20RDP%20inbound%20rule%2014.png)
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/adding%20inbound%20rule%2015.png)
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/changing%20destination%20port%20ranges%20and%20name%2016.png)
-#### Turn on azure vm and open windows defender firewall 
+### 🔥 Step 3: Disable Windows Defender Firewall
+
+- Open your **Windows 10 Virtual Machine** from the Azure Portal.
+- Go to **Start Menu** → search for **Windows Defender Firewall** and open it.
+- In the left pane, click on **"Advanced Settings"**.
+- In the **Windows Defender Firewall with Advanced Security** window:
+  - Click on **Domain Profile** → set **Firewall state** to **Off**.
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/17.png)
+  - Click on **Private Profile** → set **Firewall state** to **Off**.
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/18.png)
+  - Click on **Public Profile** → set **Firewall state** to **Off**.
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/19.png)
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/failed%20login%20vm%2021.png)
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/login%20vm%2022%20.png)
