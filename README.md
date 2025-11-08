@@ -172,7 +172,49 @@ nmap -A 192.168.0.4        # Aggressive scan with OS detection and service enume
 ```
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/nmap%20scan%20vm%2041.png)
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/nmap%20bruteforce%2042.png)
+
+### 🌐 Additional Login Attempts and Log Verification in Microsoft Sentinel
+
+During testing, login attempts were also made from **other IP addresses and user accounts**, simulating real-world attack behavior. These events are captured in the logs and can be filtered using **Kusto Query Language (KQL)**.
+
+---
+
+#### 🔍 Verify Logs in Microsoft Sentinel
+
+To confirm that logs are being ingested:
+
+1. Go to **Microsoft Sentinel** in the Azure Portal.
+2. Click on **Logs** in the left-hand menu.
+3. In the query editor, run the following KQL query:
+
+```kql
+SecurityEvent
+| where EventID == 4625
+```
+
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/failed%20logins%20from%20different%20accounts%2043.png)
+
+### 🔍 Observing Login Attempts from Multiple Accounts and IPs
+
+During testing, Microsoft Sentinel captured failed login attempts from a variety of accounts and IP addresses, simulating realistic brute-force and unauthorized access behavior.
+
+Common account names observed in the logs include:
+
+- `para`
+- `///`
+- `administrator`
+- `contas`
+
+These attempts were generated during simulated attacks and are visible in the ingested logs.
+
+To filter and analyze these events, use the following KQL query in the Sentinel Logs view:
+
+```kql
+SecurityEvent
+| where EventID == 4625
+| project TimeGenerated, Account, IpAddress, Computer, FailureReason
+```
+
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/run%20query%20check%20-de%20login%20attemps%2044.png)
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/query%20to%20check%20login%20failure%204625.png)
 #### instead of adding csv file in watchlist , i checked online
