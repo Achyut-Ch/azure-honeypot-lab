@@ -241,7 +241,6 @@ Using the enriched data, a map was created to show the geographic distribution o
 
 - **Attack hotspots**
 - **Common origin countries**
-- **Patterns in brute-force behavior**
 
 > ✅ This step adds geographic context to your security analysis and enhances visibility into where threats are coming from.
 
