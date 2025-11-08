@@ -246,8 +246,6 @@ Using the enriched data, a map was created to show the geographic distribution o
 > ✅ This step adds geographic context to your security analysis and enhances visibility into where threats are coming from.
 
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/attacking%20map.png)
-7. Imported a **GeoIP watchlist** to add country and city data to attacker IPs.
-8. Created a **Sentinel workbook (map)** to visualize attacks on a world map.
 
 ---
 
