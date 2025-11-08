@@ -64,6 +64,13 @@ This project shows how I created a **honeypot virtual machine in Azure**, captur
   - Click on **Public Profile** → set **Firewall state** to **Off**.
     
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/19.png)
+
+### 🚫 Step 4: Simulate Failed Login Attempts
+
+- I opened the VM and tried logging in with incorrect credentials.
+- This created failed login events in the system.
+- These events were sent to Microsoft Sentinel for analysis.
+
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/failed%20login%20vm%2021.png)
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/login%20vm%2022%20.png)
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/open%20event%20viewer%2023.png)
