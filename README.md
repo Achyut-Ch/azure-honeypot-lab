@@ -59,13 +59,20 @@ This project shows how I created a **honeypot virtual machine in Azure**, captur
 - In the **Windows Defender Firewall with Advanced Security** window:
   
   - Click on **Domain Profile** → set **Firewall state** to **Off**.
+    
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/17.png)
 
+
+
   - Click on **Private Profile** → set **Firewall state** to **Off**.
+    
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/18.png)
 
+
   - Click on **Public Profile** → set **Firewall state** to **Off**.
+    
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/19.png)
+
 
 ### 🚫 Step 4: Simulate Failed Login Attempts
 
