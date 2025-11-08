@@ -98,6 +98,10 @@ This project shows how I created a **honeypot virtual machine in Azure**, captur
   - Go to **Monitor** → **Log Analytics Workspaces** → **Create**.
   - Choose a name, resource group, and region.
 
+
+![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/create%20log%20analytics%20workspace%2026.png)
+![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/log%20analytics%20workspace%20created%2027.png)
+
 - After the workspace is created, set up **Microsoft Sentinel**:
   - Go to **Microsoft Sentinel** in the Azure Portal.
   - Click **+ Add** and select the Log Analytics Workspace you just created.
@@ -105,8 +109,6 @@ This project shows how I created a **honeypot virtual machine in Azure**, captur
 
 > ✅ This setup is required to collect and analyze logs from your honeypot VM in Sentinel.
 
-![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/create%20log%20analytics%20workspace%2026.png)
-![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/log%20analytics%20workspace%20created%2027.png)
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/create%20sentinel%2028.png)
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/click%20add%20log%20analytics%20workspace%2030.png)
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/sentinel%20trial%20activated%2031.png)
