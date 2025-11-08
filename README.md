@@ -222,6 +222,29 @@ SecurityEvent
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/54.png)
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/55.png)
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/click%20chart%20buttton%20in%20logs%20workspace%2057.png)
+
+### 🌍 Countries Where Attacks Originated
+
+Based on the enriched IP data, failed login attempts were observed originating from the following countries:
+
+- **South Korea**
+- **Algeria**
+- **Brazil**
+
+These locations were identified using the `geo_info_from_ip_address()` function and confirmed through Microsoft Sentinel log analysis.
+
+---
+
+### 🗺️ Visualize IP Origins on a Map
+
+Using the enriched data, a map was created to show the geographic distribution of attacker IPs. This visualization helps identify:
+
+- **Attack hotspots**
+- **Common origin countries**
+- **Patterns in brute-force behavior**
+
+> ✅ This step adds geographic context to your security analysis and enhances visibility into where threats are coming from.
+
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/attacking%20map.png)
 7. Imported a **GeoIP watchlist** to add country and city data to attacker IPs.
 8. Created a **Sentinel workbook (map)** to visualize attacks on a world map.
