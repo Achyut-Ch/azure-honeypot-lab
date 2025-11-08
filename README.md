@@ -112,6 +112,26 @@ This project shows how I created a **honeypot virtual machine in Azure**, captur
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/create%20sentinel%2028.png)
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/click%20add%20log%20analytics%20workspace%2030.png)
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/sentinel%20trial%20activated%2031.png)
+
+### 🧩 Step 7: Install Windows Security Events Pack and Configure Data Collection
+
+- After enabling **Microsoft Sentinel**, go to the **Content Hub** in the Sentinel dashboard.
+- In the **search bar**, type: `Windows Security Events`.
+- Click **Install** to add the content pack.
+- Once installed, click **Manage** and select **Windows Security Events via AMA** (Azure Monitor Agent).
+- Click **Open connector page** to begin setup.
+
+#### ⚙️ Create a Data Collection Rule (DCR)
+- When prompted, create a **Data Collection Rule**:
+  - Select your **Resource Group**
+  - Choose the **Virtual Machine** you want to monitor
+
+- This process will automatically install the **Azure Monitor Agent (AMA)** on your VM.
+- The agent will begin sending **Windows security event logs** (e.g., failed login attempts) to your **Log Analytics Workspace**.
+- These logs are now available in **Microsoft Sentinel** for analysis and visualization.
+
+> 📡 This step connects your honeypot VM to Sentinel and enables real-time security monitoring.
+
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/in%20search%20select%20windows%20sec%20event%20and%20click%20manage%2033.png)
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/Select%20win%20sec%20eve%20via%20AMA%20and%20select%20open%20connector%20page%2034.png)
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/click%20create%20data%20collection%20rule%2035%20.png)
