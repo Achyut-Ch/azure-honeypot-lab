@@ -3,6 +3,10 @@ Azure Honeypot project using Microsoft Sentinel and KQL to visualize brute-force
 
 # 🕵️‍♂️ Azure Honeypot and Attack Map Project
 
+-> writing
+-- writing 
+
+
 ## 📘 Overview
 This project shows how I created a **honeypot virtual machine in Azure**, captured attacker login attempts, sent logs to **Microsoft Sentinel**, and visualized global attack data on a live map using **KQL queries**.
 
