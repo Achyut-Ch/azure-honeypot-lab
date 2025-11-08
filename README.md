@@ -16,7 +16,7 @@ This project shows how I created a **honeypot virtual machine in Azure**, captur
 ### 1. Created an Azure Virtual Machine and allowed all inbound traffic.
 - Go to the **Azure Portal** and create a new virtual machine.
 - Select **Windows 10** as the operating system.
-- Choose an appropriate **VM size** based on your subscription or Cyber Range limitations.
+- Choose an appropriate **VM size** based on your subscription 
 - Be aware of the **monthly cost** if the VM runs continuously. Shut it down when not in use.
 - If you're using the **Cyber Range**, backend costs are managed for you.
 - Set a **username and password**, and make sure to save them securely.
@@ -31,6 +31,23 @@ This project shows how I created a **honeypot virtual machine in Azure**, captur
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/11.png)
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/Deploying%20vm%2012.png)
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/Successful%20deployment%2013.png)
+
+### 🔐 Step 2: Configure Network Security Group (NSG)
+
+- Go to the **Network Security Group (NSG)** associated with your virtual machine.
+- First, **delete the default RDP rule** to remove restricted access.
+- Then, create a new **inbound security rule** to allow all traffic.
+
+#### 🔧 Inbound Rule Settings:
+- **Source**: Any  
+- **Destination**: Any  
+- **Protocol**: Any  
+- **Port Range**: `*`  
+- **Action**: Allow  
+- **Priority**: `100` (or any low number to ensure it takes precedence)
+
+> ⚠️ This configuration is intentionally insecure for honeypot purposes. Do not use in production environments.
+
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/Deleting%20RDP%20inbound%20rule%2014.png)
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/adding%20inbound%20rule%2015.png)
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/changing%20destination%20port%20ranges%20and%20name%2016.png)
