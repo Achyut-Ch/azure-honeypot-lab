@@ -74,11 +74,16 @@ This project shows how I created a **honeypot virtual machine in Azure**, captur
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/19.png)
 
 
-### 🚫 Step 4: Simulate Failed Login Attempts
+### 🚫 Step 4: Simulate and Check Failed Login Attempts
 
-- I opened the VM and tried logging in with incorrect credentials.
-- This created failed login events in the system.
-- These events were sent to Microsoft Sentinel for analysis.
+- I intentionally tried logging into the VM with incorrect credentials to generate failed login events.
+- These attempts helped test the honeypot’s ability to detect unauthorized access.
+- To verify the events:
+  - Open the **Windows 10 Virtual Machine**.
+  - Go to **Start Menu** → search for **Event Viewer** and open it.
+  - Navigate to: **Windows Logs** → **Security**
+  - Look for entries with **Event ID 4625** — these indicate failed login attempts.
+- These logs are forwarded to **Microsoft Sentinel** for further analysis and visualization.
 
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/failed%20login%20vm%2021.png)
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/login%20vm%2022%20.png)
