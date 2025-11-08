@@ -263,15 +263,6 @@ Using the enriched data, a map was created to show the geographic distribution o
 Azure | Microsoft Sentinel | KQL | Windows 10 | Event Viewer | PowerShell | GeoIP CSV | Log Analytics Workspace
 
 ---
-
-## 🖼️ Screenshots
-You can see the steps in the screenshots folder:
-- VM setup  
-- Event Viewer failed logins  
-- Sentinel log query  
-- GeoIP import  
-- Attack Map visualization  
-
 ---
 
 
