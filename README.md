@@ -3,7 +3,7 @@ Azure Honeypot project using Microsoft Sentinel and KQL to visualize brute-force
 
 # 🕵️‍♂️ Azure Honeypot and Attack Map Project
 
-- writing
+
 
 
 
@@ -14,6 +14,12 @@ This project shows how I created a **honeypot virtual machine in Azure**, captur
 
 ## 🧱 What I Did
 ### 1. Created an Azure Virtual Machine and allowed all inbound traffic.
+- Go to the **Azure Portal** and create a new virtual machine.
+- Select **Windows 10** as the operating system.
+- Choose an appropriate **VM size** based on your subscription or Cyber Range limitations.
+- Be aware of the **monthly cost** if the VM runs continuously. Shut it down when not in use.
+- If you're using the **Cyber Range**, backend costs are managed for you.
+- Set a **username and password**, and make sure to save them securely.
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/083ae42711716c252a71348af3d6bd722e920f00/images/1.png)
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/7033f54bf80c81f44e74373600015050dfbcc567/images/2.png)
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/3.png)
