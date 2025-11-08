@@ -153,6 +153,10 @@ After the **Azure Monitor Agent (AMA)** is installed and logs are flowing into t
 SecurityEvent
 | where EventID == 4625
 ```
+
+![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/open%20log%20analytics%20workspace%20%2C%20click%20logs%2040.png)
+![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/run%20query%20secuirty%20event%20id%204625%2041.png)
+
 ### ⚔️ Simulate Reconnaissance and Brute-force Attacks from Kali Linux
 
 Use a **Kali Linux** machine to simulate reconnaissance and brute-force attacks against the honeypot VM. These scans help generate security events that will be ingested by Microsoft Sentinel.
@@ -166,8 +170,6 @@ nmap -sS 192.168.0.4       # SYN scan to detect open ports
 nmap -p- 192.168.0.4       # Full port scan across all ports
 nmap -A 192.168.0.4        # Aggressive scan with OS detection and service enumeration
 ```
-![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/open%20log%20analytics%20workspace%20%2C%20click%20logs%2040.png)
-![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/run%20query%20secuirty%20event%20id%204625%2041.png)
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/nmap%20scan%20vm%2041.png)
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/nmap%20bruteforce%2042.png)
 ![Image alt](https://github.com/Achyut-Ch/azure-honeypot-lab/blob/141327cf74335af287208fce931f2692b7dad797/images/failed%20logins%20from%20different%20accounts%2043.png)
